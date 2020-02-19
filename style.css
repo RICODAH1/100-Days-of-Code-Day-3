@@ -25,9 +25,12 @@ form {
   border-radius: 1em;
 }
 
+form:hover {
+  box-shadow: 0px 0px 20px rgb(35, 211, 255);
+}
+
 /* name and email field */
 input { 
-  width: 100%;
   /* sets all text fields to same font, by default textareas have monospace */
   font: 1em sans-serif;
   background-color: rgb(35, 211, 255);
@@ -48,8 +51,9 @@ input#email {
   box-shadow: 0px 0px 5px rgb(35, 211, 255);
 }
 
-input[type=text]:focus {
-  box-shadow: 0px 0px 15px rgb(35, 211, 255);
+input#name:focus,
+input#email:focus {
+  box-shadow: 0px 0px 20px rgb(35, 211, 255);
 }
 
 button {
@@ -62,3 +66,18 @@ button {
   color: rgb(35, 211, 255);
 }
 
+button:hover {
+  box-shadow: 0px 0px 15px rgb(35, 211, 255);
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    width: 90%;
+    text-align: center;
+    
+  }
+  input {
+    width: 85%;
+    text-align: center;
+  }
+}
